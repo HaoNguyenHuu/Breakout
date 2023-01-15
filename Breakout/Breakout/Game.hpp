@@ -1,4 +1,6 @@
 #pragma once
+
+#include<glad/glad.h>
 #include"GLFW/glfw3.h"
 
 enum  GameState
@@ -16,7 +18,7 @@ public:
 	bool keys[1024];
 	unsigned int Width, Height;
 	// constructor/destructor
-	Game(unsigned int width, unsigned int Height);
+	Game(unsigned int width, unsigned int height);
 	~Game();
 	//initailize game state(load all shaders/textures/levels)
 	void Init();
