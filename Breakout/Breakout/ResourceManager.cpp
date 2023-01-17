@@ -4,7 +4,8 @@
 #include <fstream>
 #include <sstream>
 
-#include <stb_image.h>
+#define STB_IMAGE_IMPLEMENTATION
+#include <glad/stb_image.h>
 
 //Instantiate static variables
 std::map<std::string, Shader>		ResourceManager::Shaders;
@@ -24,6 +25,7 @@ Shader ResourceManager::GetShader(std::string name)
 Texture2D ResourceManager::loadTexture(const char* file, bool alpha, std::string name) 
 {
 	Textures[file] = loadTextureFromFile(file, alpha);
+	return Textures[file];
 }
 
 Texture2D ResourceManager::getTexture(std::string name)

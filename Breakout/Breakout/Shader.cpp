@@ -8,7 +8,7 @@ Shader& Shader::Use()
 	return(*this);
 }
 
-void Shader::Complile(const char* vertexSource, const char* fragmentSource, const char* geometrySource = nullptr)
+void Shader::Complile(const char* vertexSource, const char* fragmentSource, const char* geometrySource)
 {
 	unsigned int sVertex, sFragment, gShader;
 	//Vertex Shader
